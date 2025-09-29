@@ -1,0 +1,25 @@
+plugins {
+    id 'java'
+    id 'application'
+}
+
+application {
+    mainClass.set('dev.ahwar.Main')
+}
+
+group 'dev.ahwar'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'com.microsoft.onnxruntime:onnxruntime:1.13.1'
+    implementation "ai.djl.huggingface:tokenizers:0.29.0"
+    implementation 'org.slf4j:slf4j-api:2.0.13'
+}
+
+test {
+    useJUnitPlatform()
+}
